@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "skipDefaultLibCheck": true,
+    "noEmit": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": false,
+    "noImplicitThis": true,
+    "noImplicitAny": false,
+    "importHelpers": false,
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "jsx": "react-jsx",
+    "types": [
+      "vite/client"
+    ],
+    "paths": {
+      "~/*": [
+        "src/*"
+      ],
+      "#/*": [
+        "../dist/*"
+      ],
+      "my-pkg-name": [
+        "../src"
+      ],
+      "my-pkg-name/*": [
+        "../src/*"
+      ]
+    }
+  }
+}
