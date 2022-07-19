@@ -45,3 +45,16 @@ Project
 ├── tsconfig.json      # ts config
 └── tsup.config.ts     # build package with tsup
 ```
+
+## how to add NPM_TOKEN
+
+1. [create npm token](https://docs.npmjs.com/creating-and-viewing-access-tokens)
+2. then copy npm token, add to github project settings
+
+     - project -> settings -> secrets -> actions
+
+## how to add GITHUB_TOKEN
+
+- [add GITHUB_TOKEN](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
+
