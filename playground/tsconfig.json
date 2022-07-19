@@ -16,7 +16,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": false,
     "noImplicitThis": true,
@@ -41,5 +41,11 @@
         "../src/*"
       ]
     }
-  }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "../src/**/*"
+  ]
 }
