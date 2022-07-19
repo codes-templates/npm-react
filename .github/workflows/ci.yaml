@@ -18,8 +18,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          registry-url: https://registry.npmjs.org/
-          cache: npm
+          # registry-url: https://registry.npmjs.org/
+          # cache: npm
 
       - name: Install
         run: npm install
@@ -27,59 +27,59 @@ jobs:
       - name: Lint
         run: npm run lint
 
-  stylelint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup Node 16.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          registry-url: https://registry.npmjs.org/
-          cache: npm
+  # stylelint:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Setup Node 16.x
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 16.x
+  #         # registry-url: https://registry.npmjs.org/
+  #         # cache: npm
 
-      - name: Install
-        run: npm install
+  #     - name: Install
+  #       run: npm install
 
-      - name: Stylelint
-        run: npm run stylelint
+  #     - name: Stylelint
+  #       run: npm run stylelint
 
-  typecheck:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup Node 16.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          registry-url: https://registry.npmjs.org/
-          cache: npm
+  # typecheck:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Setup Node 16.x
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 16.x
+  #         # registry-url: https://registry.npmjs.org/
+  #         # cache: npm
 
-      - name: Install
-        run: npm install
+  #     - name: Install
+  #       run: npm install
 
-      - name: Typecheck
-        run: npm run typecheck
+  #     - name: Typecheck
+  #       run: npm run typecheck
 
-  test:
-    runs-on: ${{ matrix.os }}
+  # test:
+  #   runs-on: ${{ matrix.os }}
 
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x]
-        os: [ubuntu-latest]
-      fail-fast: false
+  #   strategy:
+  #     matrix:
+  #       node-version: [14.x, 16.x]
+  #       os: [ubuntu-latest]
+  #     fail-fast: false
 
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup Node ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          registry-url: https://registry.npmjs.org/
-          cache: npm
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Setup Node ${{ matrix.node-version }}
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: ${{ matrix.node-version }}
+  #         registry-url: https://registry.npmjs.org/
+  #         cache: npm
 
-      - run: npm install
+  #     - run: npm install
 
-      - name: Unit Test
-        run: npm run test
+  #     - name: Unit Test
+  #       run: npm run test
