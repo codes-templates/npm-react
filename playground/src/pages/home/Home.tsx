@@ -5,7 +5,9 @@ export default function Home() {
     <div>
       home
       {' '}
-      { REACT_TEST.demo }
+      <span className="demo">
+        { REACT_TEST.demo }
+      </span>
     </div>
   );
 }

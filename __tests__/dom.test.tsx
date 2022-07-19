@@ -10,7 +10,7 @@ describe('dom test', () => {
 
     await document.body.appendChild(div);
 
-    const mask: HTMLElement = document.body.querySelector('#adm-mask');
+    const mask = document.body.querySelector('#adm-mask') as HTMLElement;
     expect(mask).toMatchSnapshot();
     div.remove();
     expect(mask).not.toBeInTheDocument();

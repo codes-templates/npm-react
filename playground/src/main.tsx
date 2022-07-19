@@ -1,5 +1,6 @@
+import App from './routers';
 import ReactDOM from 'react-dom';
-import App from './pages/home/Home';
+import '#/index.css';
 
 ReactDOM.render(
   <App />,
