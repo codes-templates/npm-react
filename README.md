@@ -19,6 +19,7 @@
 - 🎄 Unit Testing with [Vitest](https://vitest.dev/)
 - 🏑 [Storybook](https://storybook.js.org/) for building UI components and pages
 - 🧆 [ESLint](https://eslint.org/) statically analyzes your code to quickly find problems.
+- ⚒ [Husky](https://typicode.github.io/husky/#/) & [lint-staged](https://github.com/okonet/lint-staged#readme)
 - 🛸 Deploy on [Netlify](https://www.netlify.com/), zero-config
 - 🥳 [MIT License](https://mit-license.org/)
 
