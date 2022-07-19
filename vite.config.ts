@@ -3,7 +3,6 @@
 
 import dts from 'vite-plugin-dts';
 import path from 'path';
-import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
@@ -27,11 +26,13 @@ export default defineConfig({
     },
     // sourcemap: true,
     rollupOptions: {
-      external: [],
+      external: [
+        'react',
+        'react-dom'
+      ],
     },
   },
   plugins: [
-    react(),
     // https://www.npmjs.com/package/vite-plugin-dts
     dts({
       include: 'src',

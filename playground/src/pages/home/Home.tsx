@@ -1,4 +1,4 @@
-import { REACT_TEST } from 'my-pkg-name';
+import { REACT_TEST, Demo } from 'my-pkg-name';
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
       <span className="demo">
         { REACT_TEST.demo }
       </span>
+      <Demo />
     </div>
   );
 }

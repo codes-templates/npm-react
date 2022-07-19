@@ -1,3 +1,4 @@
+import { REACT_TEST } from 'my-pkg-name';
 import './button.css';
 
 interface ButtonProps {
@@ -42,6 +43,8 @@ export const Button = ({
       {...props}
     >
       {label}
+      {' '}
+      {REACT_TEST.demo}
     </button>
   );
 };
