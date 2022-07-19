@@ -1,5 +1,5 @@
 // https://stylelint.io/user-guide/get-started
-// 执行npx stylelint **/*.{css} 进行校验
+// 执行npx stylelint src/**/*.css 进行校验
 
 module.exports = {
   extends: [

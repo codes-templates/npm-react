@@ -1,5 +1,5 @@
 {
-  "**/*.{css}": [
+  "**/*.css": [
     "stylelint --fix"
   ],
   "*.{ts,tsx}": [

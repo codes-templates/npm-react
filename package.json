@@ -40,7 +40,7 @@
     "prepublishOnly": "npm run build",
     "release": "bumpp --commit --tag --push && npm publish",
     "storybook": "start-storybook -p 6006",
-    "stylelint": "stylelint **/*.{css}",
+    "stylelint": "stylelint src/**/*.css",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "typecheck": "tsc --noEmit"
