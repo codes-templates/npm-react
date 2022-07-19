@@ -20,7 +20,7 @@ module.exports = {
         alias: [
           ...(
             Object.entries({
-              'my-pkg-name': path.resolve(__dirname, '../src/index.ts'),
+              'my-pkg-custom-name': path.resolve(__dirname, '../src/index.ts'),
             }).map(([key, val]) => ({ find: key, replacement: val }))
           ),
         ],

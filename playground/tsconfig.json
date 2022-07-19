@@ -34,10 +34,10 @@
       "#/*": [
         "../dist/*"
       ],
-      "my-pkg-name": [
+      "my-pkg-custom-name": [
         "../src"
       ],
-      "my-pkg-name/*": [
+      "my-pkg-custom-name/*": [
         "../src/*"
       ]
     }

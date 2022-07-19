@@ -1,4 +1,4 @@
-import { REACT_TEST } from 'my-pkg-name';
+import { REACT_TEST } from 'my-pkg-custom-name';
 import './button.css';
 
 interface ButtonProps {

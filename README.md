@@ -20,6 +20,10 @@
 - 🛸 Deploy on [Netlify](https://www.netlify.com/), zero-config
 - 🥳 [MIT License](https://mit-license.org/)
 
+## how to use
+
+replace ```my-pkg-custom-name``` with your package name
+
 
 ## Directory structure
 
