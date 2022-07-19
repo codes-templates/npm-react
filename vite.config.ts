@@ -5,6 +5,7 @@ import dts from 'vite-plugin-dts';
 import path from 'path';
 import { defineConfig } from 'vite';
 
+// vite config can not read babel.config.js🤣🤣🤣
 export default defineConfig({
   build: {
     minify: true,
@@ -17,7 +18,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'src/index.ts'),
       formats: ['es', 'cjs'],
     },
-    // sourcemap: true,
+    sourcemap: false,
     rollupOptions: {
       external: [
         'react',

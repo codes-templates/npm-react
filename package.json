@@ -30,10 +30,10 @@
     "playground"
   ],
   "scripts": {
-    "build": "concurrently \"tsup\" \"npm run build:css\"",
+    "build": "tsup && npm run build:css",
     "build:css": "postcss src/styles/index.css > dist/index.css",
     "build:storybook": "build-storybook",
-    "build:vite": "vite build",
+    "build:vite": "vite build && npm run build:css",
     "dev": "concurrently \"npm run build:css-watch\" \"npm run dev --workspace playground\"",
     "lint": "eslint **/*.{ts,tsx} --ext .ts,.tsx",
     "prepare": "chmod +x .husky/* && husky install",
