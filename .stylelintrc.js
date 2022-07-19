@@ -1,5 +1,5 @@
 // https://stylelint.io/user-guide/get-started
-// 执行npx stylelint **/*.{css,scss} 进行校验
+// 执行npx stylelint **/*.{css} 进行校验
 
 module.exports = {
   extends: [
@@ -22,10 +22,4 @@ module.exports = {
     'no-descending-specificity': null,
     'font-family-no-missing-generic-family-keyword': null,
   },
-  overrides: [
-    {
-      files: '**/*.scss',
-      customSyntax: 'postcss-scss',
-    },
-  ]
 };

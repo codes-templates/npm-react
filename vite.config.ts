@@ -6,13 +6,6 @@ import path from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  resolve: {
-    alias: {
-      '~/': `${path.resolve(__dirname, './src')}/`,
-      '#/': `${path.resolve(__dirname, './dist')}/`,
-      'my-pkg-name': path.resolve(__dirname, './src/index.ts'),
-    },
-  },
   build: {
     minify: true,
     lib: {

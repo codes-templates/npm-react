@@ -20,8 +20,6 @@ module.exports = {
         alias: [
           ...(
             Object.entries({
-              '~/': `${path.resolve(__dirname, '../src')}/`,
-              '#/': `${path.resolve(__dirname, '../dist')}/`,
               'my-pkg-name': path.resolve(__dirname, '../src/index.ts'),
             }).map(([key, val]) => ({ find: key, replacement: val }))
           ),

@@ -19,9 +19,7 @@
   ],
   "stylelint.validate": [
     "css",
-    "postcss",
-    "scss",
-    "sass"
+    "postcss"
   ],
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"

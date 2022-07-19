@@ -9,7 +9,6 @@ __mocks__
 __tests__
 src/assets
 src/**/*.css
-src/**/*.scss
 .eslintrc.js
 babel.config.js
 .cz-config.js

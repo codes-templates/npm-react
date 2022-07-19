@@ -28,14 +28,11 @@
     "experimentalDecorators": true,
     "jsx": "react-jsx",
     "paths": {
-      "~/*": [
-        "src/*"
-      ],
-      "#/*": [
-        "dist/*"
-      ],
       "my-pkg-name": [
-        "src/index.ts"
+        "./src"
+      ],
+      "my-pkg-name/*": [
+        "./src/*"
       ]
     }
   },
