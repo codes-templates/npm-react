@@ -1,7 +1,7 @@
 # README
 
 - ✈️ Project init with [vite](https://vitejs.dev/)
-- 🪖 [Github Actions](https://docs.github.com/cn/actions) support
+- 🪖 [Github Actions](https://docs.github.com/cn/actions) support (Auto CI / Auto Release / Auto Deploy)
 - 🍕 Build npm package with [tsup](https://tsup.egoist.sh/)
 - 🍭 Built-in react dev environment
 

@@ -73,25 +73,3 @@ jobs:
 
       - name: Unit Test
         run: npm run test
-
-  # test:
-  #   runs-on: ${{ matrix.os }}
-
-  #   strategy:
-  #     matrix:
-  #       node-version: [14.x, 16.x]
-  #       os: [ubuntu-latest]
-  #     fail-fast: false
-
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Setup Node ${{ matrix.node-version }}
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: ${{ matrix.node-version }}
-  #         registry-url: https://registry.npmjs.org/
-
-  #     - run: npm install
-
-  #     - name: Unit Test
-  #       run: npm run test
