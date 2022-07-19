@@ -43,7 +43,6 @@
     "node_modules",
     "build",
     "dist",
-    "setupTests.ts",
-    "__unconfig_vite.config.ts"
+    "playground"
   ]
 }

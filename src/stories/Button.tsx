@@ -1,4 +1,5 @@
 import { REACT_TEST } from 'my-pkg-custom-name';
+import React from 'react';
 import './button.css';
 
 interface ButtonProps {
