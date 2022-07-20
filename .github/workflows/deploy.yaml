@@ -1,4 +1,4 @@
-name: 'Deploy to netlify'
+name: 'Deploy(main)'
 
 on:
   push:
@@ -11,8 +11,24 @@ on:
       - main
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - run: npm ci
+      - run: npm test
+      - run: npm run lint
+      - run: npm run stylelint
+      - run: npm run typecheck
+
   deploy:
+    needs: check
     name: 'Deploy to Netlify' # https://github.com/marketplace/actions/netlify-deploy
+    runs-on: ubuntu-latest
     steps:
       - uses: jsmrcaga/action-netlify-deploy@v1.1.0
         with:
