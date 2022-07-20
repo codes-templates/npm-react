@@ -39,7 +39,6 @@
     "prepare": "chmod +x .husky/* && husky install",
     "prepublishOnly": "npm run build",
     "release": "bumpp --commit --tag --push",
-    "publish": "npm publish",
     "storybook": "start-storybook -p 6006",
     "stylelint": "stylelint src/**/*.css",
     "test": "vitest",
