@@ -3,16 +3,16 @@
   "version": "0.0.7",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/xxx/xxx#readme",
+  "homepage": "https://github.com/jerrywu001/react-npm-template#readme",
   "bugs": {
-    "url": "https://github.com/xxx/xxx/issues"
+    "url": "https://github.com/jerrywu001/react-npm-template/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xxx/xxx.git"
+    "url": "git+https://github.com/jerrywu001/react-npm-template.git"
   },
   "license": "MIT",
-  "author": "xxxx <xxx@xxx.com>",
+  "author": "jerrywu001 <57242263@163.com>",
   "sideEffects": [
     "dist/index.css"
   ],
