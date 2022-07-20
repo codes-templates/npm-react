@@ -1,7 +1,8 @@
 # README
 
-##  React suport >=16.8.0
+##  Features
 
+- 💻 React suport >=16.8.0
 - ✈️ Project init with [vite](https://vitejs.dev/)
 - 🪖 [Github Actions](https://docs.github.com/cn/actions) support (Auto CI when push & pull_request / Auto Release when add a tag / Auto Deploy when push & pull_request)
 - 🍕 Build npm package with [tsup](https://tsup.egoist.sh/)
@@ -20,7 +21,7 @@
 - 🏑 [Storybook](https://storybook.js.org/) for building UI components and pages
 - 🧆 [ESLint](https://eslint.org/) statically analyzes your code to quickly find problems.
 - ⚒ [Husky](https://typicode.github.io/husky/#/) & [lint-staged](https://github.com/okonet/lint-staged#readme)
-- 🛸 Deploy on [Netlify](https://www.netlify.com/), zero-config
+- 🛸 Deploy Storybook on [Netlify](https://www.netlify.com/), [config](./.github/workflows/deploy.yaml)
 - 🥳 [MIT License](https://mit-license.org/)
 
 ## how to use
@@ -55,10 +56,23 @@ Project
 
 ## how to add NPM_TOKEN
 
-1. [create npm token](https://docs.npmjs.com/creating-and-viewing-access-tokens)
+1. [create npm auth token](https://docs.npmjs.com/creating-and-viewing-access-tokens)
 2. then copy npm token, add to github project settings
 
-     - project -> settings -> secrets -> actions
+     - project -> settings -> secrets -> actions -> create new token with name:NPM_TOKEN
+
+## how to add NETLIFY_TOKEN
+
+1. [create netlify auth token](https://app.netlify.com/user/applications#personal-access-tokens)
+2. then copy netlify token, add to github project settings
+
+     - project -> settings -> secrets -> actions -> create new token with name:NETLIFY_TOKEN
+
+3. create a site on netlify
+
+3. copy the site_id from your netlify site settings, add it to github project settings
+
+     - project -> settings -> secrets -> actions -> create new token with name:NETLIFY_SITE_ID
 
 ## how to add GITHUB_TOKEN
 

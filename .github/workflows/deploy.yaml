@@ -1,0 +1,23 @@
+name: 'Deploy to netlify'
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    types: [ assigned, opened, edited, synchronize, reopened ]
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: 'Deploy to Netlify' # https://github.com/marketplace/actions/netlify-deploy
+    steps:
+      - uses: jsmrcaga/action-netlify-deploy@v1.1.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_DEPLOY_TO_PROD: true
+          build_directory: 'storybook-static'
+          build_command: 'npm run build:storybook'
