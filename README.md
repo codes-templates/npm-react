@@ -21,6 +21,7 @@
 - 🏑 [Storybook](https://storybook.js.org/) for building UI components and pages
 - 🧆 [ESLint](https://eslint.org/) statically analyzes your code to quickly find problems.
 - ⚒ [Husky](https://typicode.github.io/husky/#/) & [lint-staged](https://github.com/okonet/lint-staged#readme)
+- ☕ [Commitlint](https://commitlint.js.org) that helps your team adhering to a commit convention
 - 🛸 Deploy Storybook on [Netlify](https://www.netlify.com/) ---> [config](./.github/workflows/deploy.yaml)
 - 🥳 [MIT License](https://mit-license.org/)
 
@@ -54,14 +55,14 @@ Project
 └── tsup.config.ts     # build package with tsup
 ```
 
-## how to add NPM_TOKEN
+## How to add NPM_TOKEN
 
 1. [create npm auth token](https://docs.npmjs.com/creating-and-viewing-access-tokens)
 2. then copy npm token, add to github project settings
 
      - project -> settings -> secrets -> actions -> create new token with name:NPM_TOKEN
 
-## how to add NETLIFY_TOKEN
+## How to add NETLIFY_TOKEN
 
 1. [create netlify auth token](https://app.netlify.com/user/applications#personal-access-tokens)
 2. then copy netlify token, add to github project settings
@@ -74,9 +75,9 @@ Project
 
      - project -> settings -> secrets -> actions -> create new token with name:NETLIFY_SITE_ID
 
-5. Stop auto Build from Build settings of site
+5. Stop Build from Build settings of site
 
-## how to add GITHUB_TOKEN
+## How to add GITHUB_TOKEN
 
 - [add GITHUB_TOKEN](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 

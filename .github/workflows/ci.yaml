@@ -5,8 +5,9 @@ on:
   #   branches:
   #     - main
 
+  # https://frontside.com/blog/2020-05-26-github-actions-pull_request/
   pull_request:
-    types: [ assigned, opened, edited, synchronize, reopened ]
+    types: [ opened, edited, synchronize, reopened ]
     branches:
       - main
 

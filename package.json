@@ -36,7 +36,7 @@
     "build:vite": "vite build && npm run build:css",
     "dev": "concurrently \"npm run build:css-watch\" \"npm run dev --workspace playground\"",
     "lint": "eslint src/**/*.{ts,tsx} --ext .ts,.tsx",
-    "prepare": "chmod +x .husky/* && husky install",
+    "prepare": "chmod a+x .husky/* && husky install",
     "prepublishOnly": "npm run build",
     "release": "bumpp --commit --tag --push",
     "storybook": "start-storybook -p 6006",
@@ -48,6 +48,8 @@
   "devDependencies": {
     "@babel/core": "^7.18.9",
     "@babel/plugin-transform-runtime": "^7.18.9",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@swc/core": "^1.2.218",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",
