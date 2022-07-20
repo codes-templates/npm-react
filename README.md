@@ -70,9 +70,11 @@ Project
 
 3. create a site on netlify
 
-3. copy the site_id from your netlify site settings, add it to github project settings
+4. copy the site_id from your netlify site settings, add it to github project settings
 
      - project -> settings -> secrets -> actions -> create new token with name:NETLIFY_SITE_ID
+
+5. Stop auto Build from Build settings of site
 
 ## how to add GITHUB_TOKEN
 
