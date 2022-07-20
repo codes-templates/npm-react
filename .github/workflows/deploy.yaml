@@ -30,12 +30,16 @@ jobs:
     name: 'Deploy to Netlify' # https://github.com/marketplace/actions/netlify-deploy
     runs-on: ubuntu-latest
     steps:
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build:storybook
+
       - uses: jsmrcaga/action-netlify-deploy@v1.1.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_DEPLOY_TO_PROD: true
           build_directory: 'storybook-static'
-
-      - run: npm ci
-      - run: npm run build:storybook
