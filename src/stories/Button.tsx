@@ -46,7 +46,6 @@ export const Button = ({
       {label}
       {' '}
       {REACT_TEST.demo}
-      sss
     </button>
   );
 };
