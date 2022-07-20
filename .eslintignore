@@ -8,3 +8,4 @@ babel.config.js
 setupTests.ts
 vite.config.ts
 postcss.config.js
+commitlint.config.js
