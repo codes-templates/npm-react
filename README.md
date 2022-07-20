@@ -26,7 +26,7 @@
 
 ## how to use
 
-replace ```my-pkg-custom-name``` with your package name
+replace ```custom-package-name``` with your package name
 
 
 ## Directory structure

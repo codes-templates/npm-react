@@ -1,4 +1,4 @@
-import { REACT_TEST, Demo } from 'my-pkg-custom-name';
+import { REACT_TEST, Demo } from 'custom-package-name';
 
 export default function Home() {
   return (

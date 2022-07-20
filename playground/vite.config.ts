@@ -9,7 +9,7 @@ export default defineConfig({
     alias: {
       '@/': `${path.resolve(__dirname, 'src')}/`,
       '#/': `${path.resolve(__dirname, '../dist')}/`,
-      'my-pkg-custom-name': path.resolve(__dirname, '../src'),
+      'custom-package-name': path.resolve(__dirname, '../src'),
     },
   },
   build: {

@@ -1,4 +1,4 @@
-import { REACT_TEST } from 'my-pkg-custom-name';
+import { REACT_TEST } from 'custom-package-name';
 import React from 'react';
 import './button.css';
 

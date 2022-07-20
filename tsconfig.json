@@ -28,10 +28,10 @@
     "experimentalDecorators": true,
     "jsx": "react",
     "paths": {
-      "my-pkg-custom-name": [
+      "custom-package-name": [
         "./src"
       ],
-      "my-pkg-custom-name/*": [
+      "custom-package-name/*": [
         "./src/*"
       ]
     }
