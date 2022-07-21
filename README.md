@@ -4,6 +4,10 @@
 
 - 💻 React suport >=16.8.0
 - ✈️ Project init with [vite](https://vitejs.dev/)
+- 📦 Support cjs & esm
+
+---
+
 - 🪖 [Github Actions](https://docs.github.com/cn/actions) support (Auto CI on pull_request / Auto Release on push tag / Auto Deploy on push & pull_request)
 - 🍕 Build npm package with [tsup](https://tsup.egoist.sh/)
 - 🍭 Built-in react dev environment
