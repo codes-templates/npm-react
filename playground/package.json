@@ -2,8 +2,9 @@
   "name": "playground",
   "version": "1.0.0",
   "scripts": {
-    "build": "vite build",
-    "dev": "vite --port 3333 --open",
+    "build": "tsc && vite build",
+    "dev": "vite --open",
+    "dev:usepack": "cross-env USEPACK=true vite --port 5000 --open",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },

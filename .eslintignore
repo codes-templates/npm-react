@@ -9,3 +9,11 @@ setupTests.ts
 vite.config.ts
 postcss.config.js
 commitlint.config.js
+tsconfig.json
+**/*.css
+**/*.scss
+**/*.less
+**/*.module.css
+**/*.module.scss
+**/*.module.less
+__unconfig_vite.config.ts

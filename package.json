@@ -35,6 +35,7 @@
     "build:storybook": "build-storybook",
     "build:vite": "vite build && npm run build:css",
     "dev": "concurrently \"npm run build:css-watch\" \"npm run dev --workspace playground\"",
+    "dev:pack": "npm run dev:usepack --workspace playground",
     "lint": "eslint src/**/*.{ts,tsx} --ext .ts,.tsx",
     "prepare": "chmod a+x .husky/* && husky install",
     "prepublishOnly": "npm run build",
