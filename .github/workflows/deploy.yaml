@@ -40,17 +40,23 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_DEPLOY_TO_PROD: true
           use_nvm: false
-          build_command: 'npm run build:storybook'
+          build_command: 'npm run build'
           build_directory: 'storybook-static'
 
       # https://github.com/marketplace/actions/vercel-deploy-action
       - name: deploy to vercel
-        uses: actions/checkout@v2
-      - uses: ngduc/vercel-deploy-action@master
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
         with:
-          vercel-cli: vercel
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-args: '--prod' #Optional
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
+          node-version: 16.x
+          registry-url: https://registry.npmjs.org/
+        run: npm ci
+
+      - uses: xmflsct/action-vercel-deployment@v0.5.3
+        with:
+          vercelToken: ${{ secrets.VERCEL_TOKEN }}
+          vercelOrgId: ${{ secrets.VERCEL_ORG_ID }}
+          vercelProjectId: ${{ secrets.VERCEL_PROJECT_ID }}
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          deploySource: "storybook-static"
