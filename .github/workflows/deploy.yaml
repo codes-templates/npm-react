@@ -30,9 +30,9 @@ jobs:
     name: 'Deploy storybook'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - name: Setup Node 16.x
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v1
         with:
           node-version: 16.x
           registry-url: https://registry.npmjs.org/
@@ -53,7 +53,7 @@ jobs:
 
       # https://github.com/marketplace/actions/vercel-deployment
       - name: deploy to vercel
-        uses: xmflsct/action-vercel-deployment@v0.5.1
+        uses: xmflsct/action-vercel-deployment@v0.5.3
         with:
           vercelToken: ${{ secrets.VERCEL_TOKEN }}
           vercelOrgId: ${{ secrets.VERCEL_ORG_ID }}
