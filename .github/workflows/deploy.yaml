@@ -11,45 +11,37 @@ on:
       - main
 
 jobs:
-  # check:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: actions/setup-node@v3
-  #       with:
-  #         node-version: 16
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
-  #     - run: npm ci
-  #     - run: npm test
-  #     - run: npm run lint
-  #     - run: npm run stylelint
-  #     - run: npm run typecheck
+      - run: npm ci
+      - run: npm test
+      - run: npm run lint
+      - run: npm run stylelint
+      - run: npm run typecheck
 
   deploy:
-    # needs: check
+    needs: check
     name: 'Deploy storybook'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Setup Node 16.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-          registry-url: https://registry.npmjs.org/
-
-      - name: Install
-        run: npm ci
+      - uses: actions/checkout@v3
 
       # https://github.com/marketplace/actions/netlify-deploy
-      # - name: deploy to netlify
-      #   uses: jsmrcaga/action-netlify-deploy@v1.8.0
-      #   with:
-      #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
-      #     NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-      #     NETLIFY_DEPLOY_TO_PROD: true
-      #     use_nvm: false
-      #     build_command: 'npm run build'
-      #     build_directory: 'storybook-static'
+      - name: deploy to netlify
+        uses: jsmrcaga/action-netlify-deploy@v1.8.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_DEPLOY_TO_PROD: true
+          use_nvm: false
+          build_command: 'npm run build'
+          build_directory: 'storybook-static'
 
       # https://github.com/marketplace/actions/deploy-to-vercel-action
       - name: deploy to vercel

@@ -59,6 +59,10 @@ Project
 └── tsup.config.ts     # build package with tsup
 ```
 
+## How to add GITHUB_TOKEN
+
+- [add GITHUB_TOKEN](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
 ## How to add NPM_TOKEN
 
 1. [create npm auth token](https://docs.npmjs.com/creating-and-viewing-access-tokens)
@@ -93,8 +97,8 @@ Project
 
      - project -> settings -> secrets -> actions -> create new token with name:VERCEL_TOKEN
 
-## How to add GITHUB_TOKEN
+5. change project build setting
 
-- [add GITHUB_TOKEN](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+    ![setting](./vercel_deploy.png)
 
 
