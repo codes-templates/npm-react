@@ -38,7 +38,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install
-        run: yarn
+        run: npm ci
 
       # https://github.com/marketplace/actions/netlify-deploy
       # - name: deploy to netlify
@@ -51,13 +51,11 @@ jobs:
       #     build_command: 'npm run build'
       #     build_directory: 'storybook-static'
 
-      # https://github.com/marketplace/actions/vercel-deployment
+      # https://github.com/marketplace/actions/deploy-to-vercel-action
       - name: deploy to vercel
-        uses: xmflsct/action-vercel-deployment@v0.5.3
+        uses: BetaHuhn/deploy-to-vercel-action@v1.7.1
         with:
-          vercelToken: ${{ secrets.VERCEL_TOKEN }}
-          vercelOrgId: ${{ secrets.VERCEL_ORG_ID }}
-          vercelProjectId: ${{ secrets.VERCEL_PROJECT_ID }}
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
-          buildOption: true
-          deploySource: "storybook-static"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
