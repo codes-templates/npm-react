@@ -38,7 +38,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install
-        run: npm install
+        run: yarn
 
       # https://github.com/marketplace/actions/netlify-deploy
       # - name: deploy to netlify
