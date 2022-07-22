@@ -11,7 +11,14 @@ module.exports = {
     '@babel/preset-typescript',
   ],
   plugins: [
-    '@babel/plugin-transform-runtime', // enables the re-use of Babel's injected helper code to save on codesize.
+    '@babel/plugin-transform-runtime',
+    // https://babel.dev/docs/en/babel-plugin-transform-react-jsx
+    [
+      '@babel/plugin-transform-react-jsx',
+      {
+        // runtime: 'automatic',
+      },
+    ]
   ],
   exclude: [/core-js/],
 };

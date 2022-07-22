@@ -1,4 +1,5 @@
-import { REACT_TEST, Demo } from 'custom-package-name';
+import React from 'react';
+import { Demo, REACT_TEST } from 'custom-package-name';
 
 export default function Home() {
   return (

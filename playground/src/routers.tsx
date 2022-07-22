@@ -3,7 +3,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import Home from './pages/home/Home';
 import { BrowserRouter as Router, Navigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import {
   Route,
   Routes,
