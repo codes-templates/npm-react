@@ -81,6 +81,18 @@ Project
 
 5. Stop Build from Build settings of site
 
+## How to generate VERCEL_ORG_ID / VERCEL_PROJECT_ID
+
+1. run ```npx vercel``` in project root folder
+2. open .vercel/project.json
+3. copy orgId & projectId, add it to github project settings
+
+     - project -> settings -> secrets -> actions -> create new token with name:VERCEL_ORG_ID & VERCEL_PROJECT_ID
+
+4. [create vercel token](https://vercel.com/account/tokens), add it to github project settings
+
+     - project -> settings -> secrets -> actions -> create new token with name:VERCEL_TOKEN
+
 ## How to add GITHUB_TOKEN
 
 - [add GITHUB_TOKEN](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)

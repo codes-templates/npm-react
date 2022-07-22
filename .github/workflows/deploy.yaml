@@ -27,10 +27,13 @@ jobs:
 
   deploy:
     needs: check
-    name: 'Deploy to Netlify' # https://github.com/marketplace/actions/netlify-deploy
+    name: 'Deploy storybook'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+
+      # https://github.com/marketplace/actions/netlify-deploy
+      - name: deploy to netlify
+        uses: actions/checkout@v3
       - uses: jsmrcaga/action-netlify-deploy@v1.8.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
@@ -39,3 +42,15 @@ jobs:
           use_nvm: false
           build_command: 'npm run build:storybook'
           build_directory: 'storybook-static'
+
+      # https://github.com/marketplace/actions/vercel-deploy-action
+      - name: deploy to vercel
+        uses: actions/checkout@v2
+      - uses: ngduc/vercel-deploy-action@master
+        with:
+          vercel-cli: vercel
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-args: '--prod' #Optional
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
