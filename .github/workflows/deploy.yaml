@@ -30,11 +30,19 @@ jobs:
     name: 'Deploy storybook'
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install
+        run: npm ci
 
       # https://github.com/marketplace/actions/netlify-deploy
       - name: deploy to netlify
-        uses: actions/checkout@v3
-      - uses: jsmrcaga/action-netlify-deploy@v1.8.0
+        uses: jsmrcaga/action-netlify-deploy@v1.8.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
@@ -45,15 +53,7 @@ jobs:
 
       # https://github.com/marketplace/actions/vercel-deployment
       - name: deploy to vercel
-        uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          registry-url: https://registry.npmjs.org/
-      - run: npm ci
-
-      - uses: xmflsct/action-vercel-deployment@v0.5.3
+        uses: xmflsct/action-vercel-deployment@v0.5.3
         with:
           vercelToken: ${{ secrets.VERCEL_TOKEN }}
           vercelOrgId: ${{ secrets.VERCEL_ORG_ID }}
