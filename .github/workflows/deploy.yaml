@@ -38,7 +38,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install
-        run: npm ci
+        run: npm install
 
       # https://github.com/marketplace/actions/netlify-deploy
       # - name: deploy to netlify
@@ -53,7 +53,7 @@ jobs:
 
       # https://github.com/marketplace/actions/vercel-deployment
       - name: deploy to vercel
-        uses: actions/vercel-deployment@0.5.1
+        uses: xmflsct/action-vercel-deployment@v0.5.1
         with:
           vercelToken: ${{ secrets.VERCEL_TOKEN }}
           vercelOrgId: ${{ secrets.VERCEL_ORG_ID }}
