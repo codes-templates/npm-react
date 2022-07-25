@@ -99,6 +99,6 @@ Project
 
 5. change project build setting
 
-    ![setting](./vercel_deploy.png)
+    ![setting](https://ik.imagekit.io/jerrywu001/vercel_deploy.png?ik-sdk-version=javascript-1.4.3&updatedAt=1658727573636)
 
 
