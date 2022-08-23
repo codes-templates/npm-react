@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 16
 
-      - run: npm ci
+      - run: npm i
       - run: npm test
       - run: npm run lint
       - run: npm run stylelint
@@ -31,7 +31,7 @@ jobs:
           node-version: 16
 
       - name: Install
-        run: npm ci
+        run: npm i
 
       - name: Set registry
         run: |
