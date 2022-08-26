@@ -73,7 +73,6 @@
     "autoprefixer": "^10.4.8",
     "babel-loader": "^8.2.5",
     "bumpp": "^8.2.1",
-    "concurrently": "^7.3.0",
     "core-js": "^3.25.0",
     "cssnano": "^5.1.13",
     "esbuild-plugin-babel": "^0.2.3",
