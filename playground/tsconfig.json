@@ -31,9 +31,6 @@
       "@/*": [
         "src/*"
       ],
-      "#/*": [
-        "../dist/*"
-      ],
       "custom-package-name": [
         "../src"
       ],

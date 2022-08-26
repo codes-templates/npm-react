@@ -7,6 +7,10 @@ module.exports = {
     'stylelint-config-standard',
   ],
   rules: {
+    'annotation-no-unknown': null,
+    'at-rule-no-unknown': null,
+    'keyframe-selector-notation': null,
+    'keyframe-block-no-duplicate-selectors': null,
     'string-quotes': 'single',
     'property-no-vendor-prefix': null,
     'declaration-colon-newline-after': null,
@@ -22,4 +26,11 @@ module.exports = {
     'no-descending-specificity': null,
     'font-family-no-missing-generic-family-keyword': null,
   },
+  overrides: [
+    // 若项目中存在scss文件，添加以下配置
+    {
+      files: '**/*.scss',
+      customSyntax: 'postcss-scss',
+    },
+  ],
 };
