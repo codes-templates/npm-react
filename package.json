@@ -61,7 +61,7 @@
     "@storybook/addon-links": "^6.5.10",
     "@storybook/builder-vite": "^0.2.2",
     "@storybook/react": "^6.5.10",
-    "@swc/core": "^1.2.242",
+    "@swc/core": "^1.2.244",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.4.3",
@@ -101,7 +101,7 @@
     "stylelint-config-standard": "^28.0.0",
     "stylelint-prettier": "^2.0.0",
     "tsup": "^6.2.2",
-    "typescript": "^4.7.4",
+    "typescript": "~4.7.4",
     "vite": "^3.0.9",
     "vite-plugin-dts": "^1.4.1",
     "vitest": "^0.22.1"

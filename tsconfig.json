@@ -40,6 +40,7 @@
   "exclude": [
     "node_modules",
     "build",
-    "dist"
+    "dist",
+    "__unconfig_vite.config.ts"
   ]
 }

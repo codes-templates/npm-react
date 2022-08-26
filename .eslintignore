@@ -4,6 +4,7 @@ node_modules/*
 src/assets
 src/**/*.css
 .eslintrc.js
+.stylelintrc.js
 babel.config.js
 setupTests.ts
 vite.config.ts
