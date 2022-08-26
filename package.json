@@ -3,13 +3,13 @@
   "version": "0.0.7",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/jerrywu001/react-npm-template#readme",
+  "homepage": "https://github.com/codes-templates/npm-react#readme",
   "bugs": {
-    "url": "https://github.com/jerrywu001/react-npm-template/issues"
+    "url": "https://github.com/codes-templates/npm-react/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jerrywu001/react-npm-template.git"
+    "url": "git+https://github.com/codes-templates/npm-react.git"
   },
   "license": "MIT",
   "author": "jerrywu001 <57242263@163.com>",
@@ -30,7 +30,7 @@
     "playground"
   ],
   "scripts": {
-    "storybook": "npm run storybook -w playground",
+    "storybook": "start-storybook -p 6006",
     "build": "tsup && npm run build:css",
     "dev": "npm run dev -w playground",
     "dev:use-bundle": "run-p tsup-w dev-pack",
@@ -38,7 +38,7 @@
     "build:scss": "sass --no-source-map --style=compressed src/styles/main.scss src/index.css",
     "build:postcss": "postcss src/index.css -o dist/index.css",
     "build:vite": "vite build && npm run build:css",
-    "build:storybook": "npm run build:storybook -w playground",
+    "build:storybook": "build-storybook",
     "lint": "eslint --ext .ts,.tsx ./src",
     "tsup-w": "tsup --watch",
     "dev-pack": "npm run dev:usepack -w playground",
