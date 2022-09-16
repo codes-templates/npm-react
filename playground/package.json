@@ -9,13 +9,13 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0"
+    "react-router": "^6.4.0",
+    "react-router-dom": "^6.4.0"
   },
   "devDependencies": {
-    "@types/react-router": "^5.1.18",
+    "@types/react-router": "^5.1.19",
     "@types/react-router-dom": "^5.3.3",
-    "@vitejs/plugin-react": "^2.0.1",
+    "@vitejs/plugin-react": "^2.1.0",
     "cross-env": "^7.0.3"
   }
 }
