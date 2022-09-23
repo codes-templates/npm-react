@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "ES2015",
+    "target": "ESNext",
+    "useDefineForClassFields": true,
     "module": "ESNext",
     "moduleResolution": "Node",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],

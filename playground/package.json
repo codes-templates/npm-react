@@ -9,8 +9,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "react-router": "^6.4.0",
-    "react-router-dom": "^6.4.0"
+    "react-router": "^6.4.1",
+    "react-router-dom": "^6.4.1"
   },
   "devDependencies": {
     "@types/react-router": "^5.1.19",
