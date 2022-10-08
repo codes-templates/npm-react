@@ -10,6 +10,10 @@
 
 - 🪖 [Github Actions](https://docs.github.com/cn/actions) support (Auto CI on pull_request / Auto Release on push tag / Auto Deploy on push & pull_request)
 - 🍕 Build npm package with [tsup](https://tsup.egoist.sh/)
+- Build-in Docusaurus
+
+  > ```npm run docs```
+
 - 🍭 Built-in react dev environment
 
   > [playground](./playground/vite.config.ts) folder

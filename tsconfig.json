@@ -32,7 +32,8 @@
       ],
       "custom-package-name/*": [
         "./src/*"
-      ]
+      ],
+      "@site/*": ["./docs/*"]
     }
   },
   "include": [
