@@ -19,6 +19,7 @@
   ],
   "stylelint.validate": [
     "css",
+    "scss",
     "postcss"
   ],
   "[html]": {
