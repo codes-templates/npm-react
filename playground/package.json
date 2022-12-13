@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "husky": "^8.0.2",
-    "react-router": "^6.4.4",
-    "react-router-dom": "^6.4.4"
+    "react-router": "^6.4.5",
+    "react-router-dom": "^6.4.5"
   },
   "devDependencies": {
     "@types/react-router": "^5.1.19",
