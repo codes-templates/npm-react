@@ -69,6 +69,12 @@ Project
 
 ## How to add NPM_TOKEN
 
+0. update project setting
+
+  settings -> actions -> General
+
+  ![./token.png](https://ik.imagekit.io/jerrywu001/token.png?updatedAt=1678687995627)
+
 1. [create npm auth token](https://docs.npmjs.com/creating-and-viewing-access-tokens)
 2. then copy npm token, add to github project settings
 
