@@ -5,6 +5,7 @@ import dts from 'vite-plugin-dts';
 import path from 'path';
 import { defineConfig } from 'vite';
 import browserslistToEsbuild from 'browserslist-to-esbuild';
+import pkg from './package.json';
 
 const resolvePath = (pathName: string) => path.resolve(__dirname, pathName);
 
@@ -24,9 +25,13 @@ export default defineConfig({
     target: browserslistToEsbuild(),
     sourcemap: false,
     rollupOptions: {
+      output: {
+        exports: 'named',
+      },
       external: [
-        'react',
-        'react-dom'
+        // ...Object.keys(pkg.dependencies), // if exist
+        ...Object.keys(pkg.devDependencies),
+        ...Object.keys(pkg.peerDependencies),
       ],
     },
   },
