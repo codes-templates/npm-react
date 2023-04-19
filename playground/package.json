@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "build": "tsc && vite build",
-    "dev": "vite --open",
-    "dev:usepack": "cross-env USEPACK=true vite --port 5000 --open",
+    "dev": "vite --host --open",
+    "dev:usepack": "cross-env USEPACK=true vite --host --port 5000 --open",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },

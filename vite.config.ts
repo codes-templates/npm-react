@@ -4,6 +4,9 @@
 import dts from 'vite-plugin-dts';
 import path from 'path';
 import { defineConfig } from 'vite';
+import browserslistToEsbuild from 'browserslist-to-esbuild';
+
+const resolvePath = (pathName: string) => path.resolve(__dirname, pathName);
 
 // vite config can not read babel.config.js🤣🤣🤣
 export default defineConfig({
@@ -11,13 +14,14 @@ export default defineConfig({
     minify: true,
     lib: {
       fileName: (type) => {
-        if (type === 'es') return 'esm/index.js';
+        if (type === 'es') return 'index.mjs';
         if (type === 'cjs') return 'index.js';
         return 'index.js';
       },
-      entry: path.resolve(__dirname, 'src/index.ts'),
+      entry: resolvePath('src/index.ts'),
       formats: ['es', 'cjs'],
     },
+    target: browserslistToEsbuild(),
     sourcemap: false,
     rollupOptions: {
       external: [

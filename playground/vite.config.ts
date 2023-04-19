@@ -8,7 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@/': `${path.resolve(__dirname, 'src')}/`,
-      'custom-package-name': path.resolve(__dirname, process.env.USEPACK === 'true' ? '../dist/esm' : '../src'),
+      'custom-package-name': path.resolve(__dirname, process.env.USEPACK === 'true' ? '../dist' : '../src'),
     },
   },
   build: {
