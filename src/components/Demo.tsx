@@ -22,7 +22,9 @@ export function Demo() {
         {c}
       </p>
       <p>
-        {d}
+        test `?.`
+        {' '}
+        {d?.name}
       </p>
     </div>
   );
