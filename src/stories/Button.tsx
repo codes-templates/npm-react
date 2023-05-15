@@ -1,3 +1,4 @@
+import { REACT_TEST } from 'custom-package-name';
 import React from 'react';
 import './button.css';
 
@@ -43,6 +44,8 @@ export const Button = ({
       {...props}
     >
       {label}
+      {' '}
+      {REACT_TEST.demo}
     </button>
   );
 };
