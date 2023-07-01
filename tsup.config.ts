@@ -1,7 +1,6 @@
 import { defineConfig } from 'tsup';
 import babel from 'esbuild-plugin-babel';
 
-// https://tsup.egoist.sh/
 // https://esbuild.github.io/
 
 export default defineConfig({
@@ -22,6 +21,7 @@ export default defineConfig({
   ],
   shims: false,
   clean: true,
+  treeshake: true,
   dts: './src/index.ts',
   sourcemap: false,
   splitting: false,
