@@ -3,6 +3,7 @@ build/*
 node_modules/*
 src/assets
 src/**/*.css
+src/stories
 .eslintrc.js
 .stylelintrc.js
 babel.config.js

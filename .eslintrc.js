@@ -1,7 +1,7 @@
 /**
  * https://www.npmjs.com/package/eslint-config-airbnb-typescript
  */
- module.exports = {
+module.exports = {
   extends: [
     'airbnb-base',
     'airbnb-typescript',
@@ -11,6 +11,7 @@
     'plugin:jsx-a11y/strict',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
+    'plugin:storybook/recommended',
   ],
   env: {
     es6: true,
@@ -60,7 +61,9 @@
     'global-require': 'off',
     'import/no-dynamic-require': 'off',
     'generator-star-spacing': 'off',
-    'max-len': ['error', { 'code': 130 }],
+    'max-len': ['error', {
+      'code': 130
+    }],
     // typescript
     '@typescript-eslint/no-this-alias': 'off',
     '@typescript-eslint/no-unsafe-argument': 'off',
@@ -87,7 +90,6 @@
     '@typescript-eslint/no-namespace': 'off',
     '@typescript-eslint/no-misused-promises': 'off',
     '@typescript-eslint/prefer-regexp-exec': 'off',
-
     // javascript
     'prefer-promise-reject-errors': 'off',
     'func-names': 'off',
@@ -118,8 +120,12 @@
     'jsx-quotes': [2, 'prefer-double'],
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
-    'react/jsx-curly-newline': [2, { multiline: 'consistent' }],
-    'react/jsx-max-props-per-line': [2, { maximum: 3 }],
+    'react/jsx-curly-newline': [2, {
+      multiline: 'consistent'
+    }],
+    'react/jsx-max-props-per-line': [2, {
+      maximum: 3
+    }],
     'react/jsx-fragments': [2, 'syntax'],
     'react/jsx-equals-spacing': [2, 'never'],
     'react/destructuring-assignment': [2, 'always'],
@@ -131,9 +137,14 @@
     }],
     'react/jsx-closing-bracket-location': [2, 'line-aligned'],
     'react/jsx-boolean-value': [2, 'never'],
-    'react/self-closing-comp': [2, { component: true, html: true }],
+    'react/self-closing-comp': [2, {
+      component: true,
+      html: true
+    }],
     'react/jsx-first-prop-new-line': [2, 'multiline-multiprop'],
-    'react/jsx-sort-props': [2, { callbacksLast: true }],
+    'react/jsx-sort-props': [2, {
+      callbacksLast: true
+    }],
     'react/jsx-wrap-multilines': [2, {
       declaration: 'parens-new-line',
       assignment: 'parens-new-line',
@@ -141,7 +152,7 @@
       condition: 'parens-new-line',
       logical: 'parens-new-line',
       arrow: 'parens-new-line',
-      prop: 'parens-new-line',
+      prop: 'parens-new-line'
     }],
     'react/jsx-one-expression-per-line': 2,
     'react/jsx-filename-extension': 'off',
@@ -161,6 +172,6 @@
     'react/prefer-stateless-function': 'off',
     'react/state-in-constructor': 'off',
     'no-nested-ternary': 'off',
-    'react/no-danger': 'off',
-  },
+    'react/no-danger': 'off'
+  }
 };

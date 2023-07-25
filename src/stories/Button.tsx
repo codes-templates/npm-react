@@ -1,6 +1,5 @@
-import { REACT_TEST } from 'custom-package-name';
 import React from 'react';
-import './button.css';
+import './button.less';
 
 interface ButtonProps {
   /**
@@ -38,14 +37,12 @@ export const Button = ({
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
+      type="button"
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
       style={{ backgroundColor }}
-      type="button"
       {...props}
     >
       {label}
-      {' '}
-      {REACT_TEST.demo}
     </button>
   );
 };
