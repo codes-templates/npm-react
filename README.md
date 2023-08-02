@@ -95,6 +95,8 @@ Project
 
 5. Stop Build from Build settings of site
 
+6. [build-command-javascript-heap-out-of-memory](https://answers.netlify.com/t/build-command-javascript-heap-out-of-memory/85348/6)
+
 ## How to generate VERCEL_ORG_ID / VERCEL_PROJECT_ID
 
 1. run ```npx vercel``` in project root folder
