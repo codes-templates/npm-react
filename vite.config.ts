@@ -15,6 +15,12 @@ export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   return {
+    resolve: {
+      alias: {
+        'custom-package-name': resolvePath('./src/index.ts'),
+        'custom-package-name/': resolvePath('../src/'),
+      },
+    },
     build: {
       minify: true,
       lib: {
@@ -40,7 +46,7 @@ export default defineConfig(({ command, mode }) => {
           exports: 'named',
         },
         external: [
-          // ...Object.keys(pkg.dependencies), // if exist
+          ...Object.keys(pkg.dependencies), // if exist
           ...Object.keys(pkg.devDependencies),
           ...Object.keys(pkg.peerDependencies),
         ],
