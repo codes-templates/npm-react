@@ -55,7 +55,7 @@
     "dev": "npm run dev -w playground",
     "dev:use-bundle": "run-p tsup-w dev-pack",
     "docs": "npm run start -w docs",
-    "build:docs": "npm run build -w docs",
+    "build:docs": "cross-env NODE_OPTIONS=--max_old_space_size=1024000 npm run build -w docs",
     "build:css": "npm run build:scss && npm run build:postcss && rimraf rf ./src/index.css",
     "build:scss": "sass --no-source-map --style=compressed src/styles/main.scss src/index.css",
     "build:postcss": "postcss src/index.css -o dist/index.css",
