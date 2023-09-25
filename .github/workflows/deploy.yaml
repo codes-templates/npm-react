@@ -43,12 +43,12 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
 
       # https://github.com/marketplace/actions/netlify-deploy
-      - name: deploy to netlify
-        uses: jsmrcaga/action-netlify-deploy@v1.8.0
-        with:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_DEPLOY_TO_PROD: true
-          use_nvm: false
-          build_command: 'npm run build:docs'
-          build_directory: 'docs/build'
+      # - name: deploy to netlify
+      #   uses: jsmrcaga/action-netlify-deploy@v1.8.0
+      #   with:
+      #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+      #     NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      #     NETLIFY_DEPLOY_TO_PROD: true
+      #     use_nvm: false
+      #     build_command: 'npm run build:docs'
+      #     build_directory: 'docs/build'
