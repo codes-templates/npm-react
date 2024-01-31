@@ -1,6 +1,7 @@
 {
   "name": "playground",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "build": "tsc && vite build",
     "dev": "vite --host --open",
@@ -9,14 +10,13 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "husky": "^8.0.3",
-    "react-router": "^6.17.0",
-    "react-router-dom": "^6.17.0"
+    "react-router": "^6.21.3",
+    "react-router-dom": "^6.21.3"
   },
   "devDependencies": {
     "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3",
-    "@vitejs/plugin-react": "^4.1.0",
+    "@vitejs/plugin-react": "^4.2.1",
     "cross-env": "^7.0.3"
   }
 }

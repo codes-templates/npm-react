@@ -3,7 +3,7 @@
 
 import dts from 'vite-plugin-dts';
 import path from 'path';
-import { defineConfig, loadEnv } from 'vite';
+import { UserConfig, defineConfig, loadEnv } from 'vite';
 import browserslistToEsbuild from 'browserslist-to-esbuild';
 import { getBabelOutputPlugin } from '@rollup/plugin-babel';
 import pkg from './package.json';
@@ -11,8 +11,8 @@ import pkg from './package.json';
 const resolvePath = (pathName: string) => path.resolve(__dirname, pathName);
 
 // vite config can not read babel.config.js🤣🤣🤣
-export default defineConfig(({ command, mode }) => {
-  const env = loadEnv(mode, process.cwd(), '');
+export default defineConfig(({ mode }: UserConfig ) => {
+  const env = loadEnv(mode as string, process.cwd(), '');
 
   return {
     resolve: {
@@ -75,5 +75,5 @@ export default defineConfig(({ command, mode }) => {
         web: [/.[tj]sx$/],
       },
     },
-  };
+  } as UserConfig;
 });
