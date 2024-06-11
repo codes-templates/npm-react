@@ -9,7 +9,7 @@
 ---
 
 - 🪖 [Github Actions](https://docs.github.com/cn/actions) support (Auto CI on pull_request / Auto Release on push tag / Auto Deploy on push & pull_request)
-- 🍕 Build npm package with [tsup](https://tsup.egoist.sh/)
+- 🍕 Build npm package with [tsup](https://tsup.egoist.dev/)
 - Build-in Docusaurus
 
   > ```npm run docs```
